@@ -34,8 +34,8 @@ body {
 /* Stats Cards */
 .stats-container .stats-grid:first-child .stat-number::before {
 	content: "🔥";
+	/*v*/
 	display: block;
-	/* per metterlo sopra al numero */
 	font-size: 2rem;
 	margin-bottom: 0px;
 	padding: 0px;
@@ -54,6 +54,7 @@ body {
 
 .stats-grid:hover {
 	transform: translateY(-5px);
+	/*v*/
 	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
 }
 
@@ -72,6 +73,7 @@ body {
 
 .stats-grid:last-child {
 	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	/*v*/
 
 }
 
@@ -92,12 +94,14 @@ body {
 }
 
 .workout-plan:nth-child(3) {
+	/*v*/
 	background: rgb(247, 247, 185);
 	border-left: 4px solid orange;
 
 }
 
 .workout-plan:nth-child(even) {
+	/*v*/
 	border-left: 4px solid green;
 	background: rgb(215, 255, 215)
 }
@@ -158,7 +162,7 @@ body {
 }
 
 .exercise-item:nth-child(even) .exercise-name::before {
-	/*giusta*/
+	/*v*/
 	content: "⚡";
 	font-weight: bold;
 	color: #2c3e50;
@@ -189,6 +193,7 @@ input:focus {
 	box-shadow: 0 2px 10px rgba(74, 61, 255, 0.4);
 }
 
+/*v*/
 .goal-input-group select:focus {
 	border: 2px solid blue;
 	box-shadow: 0 2px 10px rgba(66, 64, 236, 0.4);
@@ -226,6 +231,13 @@ input:focus {
 	margin-top: 15px;
 }
 
+.save-btn:hover {
+	/* aggiustare */
+	transform: 4px translateY(2);
+	background-color: #18212b;
+	box-shadow: 0 2px 20px rgba(253, 252, 252, 0.8);
+}
+
 /* Progress Bar */
 .progress-section {
 	background: white;
@@ -252,8 +264,6 @@ input:focus {
 	position: relative;
 
 }
-
-
 
 .progress-fill:before {
 	content: "65%";
@@ -305,6 +315,17 @@ input:focus {
 	margin-bottom: 3px;
 }
 
+.nav-icon:hover {
+	/*aggiustare*/
+	background-color: #18212b;
+	text: color rgb(107, 107, 245);
+	/* box-shadow: 0 2px 20px rgba(253, 252, 252, 0.8); */
+}
+
+.nav-item:first-child {
+	border-color: 4px #2ecc71;
+}
+
 /* Quote inspirational */
 
 .quote-box {
@@ -319,20 +340,18 @@ input:focus {
 }
 
 .quote-box::after {
-	/*giusta*/
 	content: '"';
 
 }
 
+/*v*/
+
 .quote-box::before {
-	/*giusta*/
 	content: '"';
 
 }
 
 /* Spacer per la navigation fissa */
-.bottom-spacer.card:has(img).card:has(img) {
-	/* da aggiustare*/
-	border: 2px solid gold;
+.bottom-spacer {
 	height: 80px;
 }
