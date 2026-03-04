@@ -32,11 +32,12 @@ body {
 }
 
 /* Stats Cards */
-.stats-container .stats-grid:first-child .stat-number::before {           
-    content: "🔥";
-    display: block;                                         /* per metterlo sopra al numero */
-    font-size: 2rem;
-    margin-bottom: 0px;
+.stats-container .stats-grid:first-child .stat-number::before {
+	content: "🔥";
+	display: block;
+	/* per metterlo sopra al numero */
+	font-size: 2rem;
+	margin-bottom: 0px;
 	padding: 0px;
 }
 
@@ -48,6 +49,12 @@ body {
 	border-radius: 12px;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 	text-align: center;
+	transition: transform 0.2s ease;
+}
+
+.stats-grid:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
 }
 
 .stat-number {
@@ -62,10 +69,12 @@ body {
 	font-size: 0.9rem;
 	margin-top: 5px;
 }
+
 .stats-grid:last-child {
 	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-	
+
 }
+
 /* Workout Plans */
 .section-title {
 	font-size: 1.5rem;
@@ -80,6 +89,17 @@ body {
 	border-radius: 12px;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 	position: relative;
+}
+
+.workout-plan:nth-child(3) {
+	background: rgb(247, 247, 185);
+	border-left: 4px solid orange;
+
+}
+
+.workout-plan:nth-child(even) {
+	border-left: 4px solid green;
+	background: rgb(215, 255, 215)
 }
 
 .workout-plan h3 {
@@ -137,8 +157,9 @@ body {
 	border-left: 4px solid #bdc3c7;
 }
 
-.exercise-item:nth-child(even) .exercise-name::before  {                       /*giusta*/
-    content: "⚡";
+.exercise-item:nth-child(even) .exercise-name::before {
+	/*giusta*/
+	content: "⚡";
 	font-weight: bold;
 	color: #2c3e50;
 	margin-bottom: 5px;
@@ -156,6 +177,21 @@ body {
 	padding: 25px;
 	border-radius: 12px;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* select:focus,
+input:focus {
+	border: 2px solid blue;
+} */
+
+.goal-input-group input:focus {
+	border: 2px solid blue;
+	box-shadow: 0 2px 10px rgba(74, 61, 255, 0.4);
+}
+
+.goal-input-group select:focus {
+	border: 2px solid blue;
+	box-shadow: 0 2px 10px rgba(66, 64, 236, 0.4);
 }
 
 .goal-input-group {
@@ -199,9 +235,7 @@ body {
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.progress-bar::after {                               /* da aggiustare*/
-    content: "65%";
-    position: absolute;
+.progress-bar {
 	width: 100%;
 	height: 10px;
 	background: #ecf0f1;
@@ -216,7 +250,19 @@ body {
 	width: 65%;
 	border-radius: 5px;
 	position: relative;
-    
+
+}
+
+
+
+.progress-fill:before {
+	content: "65%";
+	position: absolute;
+	left: 8px;
+	top: -4px;
+	font-weight: bold;
+	font-size: 12px;
+	color: white;
 }
 
 .progress-text {
@@ -271,17 +317,22 @@ body {
 	position: relative;
 	font-style: italic;
 }
-.quote-box::after {                    /*giusta*/
+
+.quote-box::after {
+	/*giusta*/
 	content: '"';
-	
+
 }
-.quote-box::before {                    /*giusta*/
+
+.quote-box::before {
+	/*giusta*/
 	content: '"';
-	
+
 }
 
 /* Spacer per la navigation fissa */
-.bottom-spacer.card:has(img).card:has(img) {          /* da aggiustare*/
+.bottom-spacer.card:has(img).card:has(img) {
+	/* da aggiustare*/
 	border: 2px solid gold;
 	height: 80px;
 }
